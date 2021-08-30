@@ -2,25 +2,17 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 
-function getModalStyle() {
-       const top = 50;
-       const left = 50;
 
-       return {
-              top: `${ top }%`,
-              left: `${ left }%`,
-              transform: `translate(-${ top }%, -${ left }%)`
-       };
-}
 
 const useStyles = makeStyles((theme) => ({
        paper: {
-              position: "absolute",
-              width: 700,
+              maxWidth: "90%",
+              maxHeight: "80%",
               backgroundColor: theme.palette.background.paper,
               border: "2px solid #000",
               boxShadow: theme.shadows[5],
-              padding: theme.spacing(2, 4, 3)
+              padding: theme.spacing(2, 4, 3),
+              overflow: "scroll",
        },
        root: {
               maxWidth: 345,
@@ -40,10 +32,12 @@ const useStyles = makeStyles((theme) => ({
 
 export const LeftContent = React.forwardRef((props, ref) => {
        const classes = useStyles();
-       const [modalStyle] = React.useState(getModalStyle);
+
        return (
               <>
-                     <div style={modalStyle} className={classes.paper}>
+                     {/* <div style={modalStyle} className={classes.paper}> */}
+                     <div className={classes.paper}>
+
                             <Typography gutterBottom variant="h7" component="h2">
                                    現職の活動内容について
                             </Typography>
