@@ -50,14 +50,15 @@ const toolRows = [
 
 
 const useStyles = makeStyles((theme) => ({
-       seeMore: {
-              marginTop: theme.spacing(3),
-       },
+
        paper: {
               padding: theme.spacing(2),
               display: 'flex',
               overflow: 'auto',
               flexDirection: 'column',
+       },
+       table: {
+              minWidth: 650,
        },
 }));
 
@@ -72,12 +73,12 @@ export default function Skills() {
 
                      <Paper className={classes.paper}>
                             <Title>フロントエンド</Title>
-                            <Table size="small">
+                            <Table className={classes.table} aria-label="simple table">
                                    <TableHead>
                                           <TableRow>
                                                  <TableCell width="15%">技術要素</TableCell>
                                                  <TableCell width="15%">レベル</TableCell>
-                                                 <TableCell width="70%">説明</TableCell>
+                                                 <TableCell className={classes.table_explain} width="70%">説明</TableCell>
                                                  {/* <TableCell align="right">Sa？le Amount</TableCell> */}
                                           </TableRow>
                                    </TableHead>
@@ -93,6 +94,7 @@ export default function Skills() {
                                           ))}
                                    </TableBody>
                             </Table>
+
                      </Paper>
 
                      <br /><br />
@@ -100,7 +102,7 @@ export default function Skills() {
 
                      <Paper className={classes.paper}>
                             <Title>バックエンド</Title>
-                            <Table size="small">
+                            <Table className={classes.table} aria-label="simple table">
                                    <TableHead>
                                           <TableRow>
                                                  <TableCell width="15%">技術要素</TableCell>
@@ -127,7 +129,7 @@ export default function Skills() {
 
                      <Paper className={classes.paper}>
                             <Title>ツール類</Title>
-                            <Table size="small">
+                            <Table className={classes.table} aria-label="simple table">
                                    <TableHead>
                                           <TableRow>
                                                  <TableCell width="15%">技術要素</TableCell>

@@ -79,7 +79,7 @@ export default function LoadJobChange() {
                             <div className={classes.heroContent}>
                                    <Container maxWidth="sm">
                                           <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-                                                 なぜ、フロントなのか？
+                                                 なぜ、フロント？
                                           </Typography>
                                           <Typography variant="h7" align="center" color="textSecondary" paragraph>
                                                  現職はサーバーサイドが主戦場です。<br />

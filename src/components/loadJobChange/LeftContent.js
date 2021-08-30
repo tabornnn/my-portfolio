@@ -77,10 +77,9 @@ export const LeftContent = React.forwardRef((props, ref) => {
                                    </div>
                                    <div className={classes.p2}>
                                           オンライン/バッチシステムの性能測定を担当し、
-                                   </div>
-                                   <div className={classes.p2}>
                                           問題発見・原因究明・チューニング・顧客報告を遂行。
                                    </div>
+
 
                                    <div className={classes.p}>
                                           2 . FW/共通部品の構築
