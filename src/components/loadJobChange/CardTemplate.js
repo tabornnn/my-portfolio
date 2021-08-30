@@ -10,16 +10,16 @@ import LeftHead from "./LeftHead";
 import CenterHead from "./CenterHead";
 import RightHead from "./RightHead";
 
-function getModalStyle() {
-       const top = 50;
-       const left = 50;
+// function getModalStyle() {
+//        const top = 50;
+//        const left = 50;
 
-       return {
-              top: `${ top }%`,
-              left: `${ left }%`,
-              transform: `translate(-${ top }%, -${ left }%)`
-       };
-}
+//        return {
+//               top: `${ top }%`,
+//               left: `${ left }%`,
+//               transform: `translate(-${ top }%, -${ left }%)`
+//        };
+// }
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 export default function CardTemplate(props) {
        const classes = useStyles();
        // getModalStyle is not a pure function, we roll the style only on the first render
-       const [modalStyle] = React.useState(getModalStyle);
+       // const [modalStyle] = React.useState(getModalStyle);
        const [open, setOpen] = React.useState(false);
        const handleOpen = () => {
               setOpen(true);
