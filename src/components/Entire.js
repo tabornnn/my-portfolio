@@ -88,6 +88,7 @@ export default function Entire(props) {
     const classes = useStyles();
 
 
+
     // メニューのどのアイテムを押下している状態を判定するstate
     const [listItemState, setListItemState] = React.useState(homeObj.key);
     const handleHomeItem = () => {

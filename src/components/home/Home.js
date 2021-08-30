@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
               overflow: 'auto',
               flexDirection: 'column',
        },
-       fixedHeight: {
-              // height: 240,
-              height: 550,
-       },
+       // fixedHeight: {
+       //        // height: 240,
+       //        height: 550,
+       // },
 
        fixedHeight2: {
               marginTop: 32,

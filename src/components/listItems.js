@@ -12,7 +12,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const homeObj = {
   key: 'HOME',
-  text: 'HOME'
+  text: "ホーム"
 };
 
 const loadObj = {
