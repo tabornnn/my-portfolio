@@ -9,11 +9,6 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-// アイテムリストの定数宣言
-const HOME = 'HOME';
-const PROFILE = 'PROFILE'
-const SKILLS = 'SKILLS'
-const CHATBOT = 'CHATBOT'
 
 const homeObj = {
   key: 'HOME',

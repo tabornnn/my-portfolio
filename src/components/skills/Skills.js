@@ -61,9 +61,9 @@ const useStyles = makeStyles((theme) => ({
        },
 }));
 
-function preventDefault(event) {
-       event.preventDefault();
-}
+// function preventDefault(event) {
+//        event.preventDefault();
+// }
 
 export default function Skills() {
        const classes = useStyles();

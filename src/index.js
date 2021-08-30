@@ -5,7 +5,7 @@ import App from './App';
 import Entire from './components/Entire';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Album from './components copy/Album'
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,7 +14,7 @@ ReactDOM.render(
       {/* exactはpathのurlと完全一致した時、という意味 */}
       <Route path="/top" component={Entire} />
       <Route exact path="/" component={App} />
-      <Route exact path="/album" component={Album} />
+
 
     </Switch>
   </BrowserRouter>
