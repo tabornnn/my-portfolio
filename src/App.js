@@ -5,6 +5,7 @@ import Entire from './components/Entire';
 function App() {
   return (
     <>
+      アイウエオ
       <Entire />
     </>
   );
