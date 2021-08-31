@@ -16,48 +16,50 @@ const useStyles = makeStyles((theme) => ({
               display: 'flex',
               overflow: 'auto',
               flexDirection: 'column',
-       },
-       fixedHeight: {
-              // height: 240,
-              height: 550,
-       },
-
-       fixedHeight2: {
-              marginTop: 32,
-              height: 255,
+              margin: '0 auto',
+              justifyContent: 'center',
+              marginLeft: 10,
+              marginRight: 10,
+              // alignItems: 'center',
        },
 
-       fixedHeight3: {
-              marginBottom: 32,
-              height: 255,
-       }
+       myPicture: {
+              marginTop: 20,
+       },
+       fixedPaper: {
+              marginTop: 20,
+
+       },
+
 }));
 
 
 export default function Home() {
        const classes = useStyles();
 
-       const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-       const fixedHeight2Paper = clsx(classes.paper, classes.fixedHeight2);
-       const fixedHeight3Paper = clsx(classes.paper, classes.fixedHeight3);
+       const myPicture = clsx(classes.paper, classes.myPicture);
+       const fixedHeightPaper = clsx(classes.paper, classes.fixedPaper);
+
 
        return (
               <>
-                     <Grid container spacing={3}>
+                     <Grid container spacing={1}>
+
                             {/* Chart */}
                             {/* xs,md,lgについては下記サイトを参照 */}
                             {/* https://qiita.com/akatsuki174/items/53b7367b04ed0b066bbf */}
                             <Grid item xs={12} md={6} lg={7}>
-                                   <Paper className={fixedHeightPaper}>
+                                   <Paper className={myPicture}>
                                           <MyPicture />
                                    </Paper>
                             </Grid>
                             {/* Recent Deposits */}
                             <Grid item xs={12} md={6} lg={5}>
-                                   <Paper className={fixedHeight3Paper}>
+                                   <Paper className={fixedHeightPaper}>
                                           <PaperItem name={"sitePurpose"} />
                                    </Paper>
-                                   <Paper className={fixedHeight2Paper}>
+                                   <br />
+                                   <Paper className={fixedHeightPaper}>
                                           <PaperItem name={"baseProfile"} />
                                    </Paper>
                             </Grid>

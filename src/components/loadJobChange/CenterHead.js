@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 export default function CenterHead() {
        return (
               <>
-
                      <CardMedia
                             component="img"
                             alt="Contemplative Reptile"

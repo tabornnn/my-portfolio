@@ -10,17 +10,6 @@ import LeftHead from "./LeftHead";
 import CenterHead from "./CenterHead";
 import RightHead from "./RightHead";
 
-// function getModalStyle() {
-//        const top = 50;
-//        const left = 50;
-
-//        return {
-//               top: `${ top }%`,
-//               left: `${ left }%`,
-//               transform: `translate(-${ top }%, -${ left }%)`
-//        };
-// }
-
 
 const useStyles = makeStyles((theme) => ({
        root: {

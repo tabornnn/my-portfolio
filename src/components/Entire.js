@@ -1,6 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -13,19 +12,22 @@ import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import { MainListItems, secondaryListItems } from './listItems';
+import { MainListItems } from './listItems';
 import { homeObj, loadObj, skillsObj, botObj } from './listItems'
 import Home from './home/Home'
 import LoadJobChange from './loadJobChange/LoadJobChange';
 import Skills from './skills/Skills';
+import Hidden from "@material-ui/core/Hidden";
+import PropTypes from 'prop-types';
+import Chatbot from './chatbot/Chatbot'
+
 
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+                Takashi Inoue
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -41,59 +43,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
     },
-    toolbar: {
-        paddingRight: 24, // keep right padding when drawer closed
-    },
-    toolbarIcon: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-    },
-    appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-    },
-    appBarShift: {
-        marginLeft: drawerWidth,
-        width: `calc(100% - ${ drawerWidth }px)`,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    menuButton: {
-        marginRight: 36,
-    },
-    menuButtonHidden: {
-        display: 'none',
-    },
+    toolbar: theme.mixins.toolbar,
     title: {
         flexGrow: 1,
     },
     drawerPaper: {
-        position: 'relative',
-        whiteSpace: 'nowrap',
-        width: drawerWidth,
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    drawerPaperClose: {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-            width: theme.spacing(9),
-        },
+        width: drawerWidth
     },
     appBarSpacer: theme.mixins.toolbar,
     content: {
@@ -104,19 +59,36 @@ const useStyles = makeStyles((theme) => ({
     container: {
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(4),
-    }
+    },
+    appBar: {
+        [theme.breakpoints.up("sm")]: {
+            width: `calc(100% - ${ drawerWidth }px)`,
+            marginLeft: drawerWidth
+        }
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+        },
+    },
+    drawer: {
+        [theme.breakpoints.up("sm")]: {
+            width: drawerWidth,
+            flexShrink: 0
+        }
+    },
 }));
 
-export default function Entire() {
+export default function Entire(props) {
+
+    const { window } = props;
+    const container =
+        window !== undefined ? () => window().document.body : undefined;
+    const theme = useTheme();
     const classes = useStyles();
-    // メニューを隠す状態にするかを判定するstate
-    const [open, setOpen] = React.useState(true);
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
+
+
 
     // メニューのどのアイテムを押下している状態を判定するstate
     const [listItemState, setListItemState] = React.useState(homeObj.key);
@@ -134,6 +106,11 @@ export default function Entire() {
     };
     //更新関数の集約
     const handleItemFunctions = [handleHomeItem, handleProfileItem, handleCareerItem, handleChatbotItem];
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
 
     // itemListStateとコンテンツを紐付け
     const contents = (itemListState) => {
@@ -150,6 +127,12 @@ export default function Entire() {
                 return (
                     <div>
                         <Skills />
+                    </div>
+                )
+            case botObj.key:
+                return (
+                    <div>
+                        <Chatbot />
                     </div>
                 )
             default:
@@ -172,6 +155,10 @@ export default function Entire() {
                 return (
                     skillsObj.text
                 )
+            case botObj.key:
+                return (
+                    botObj.text
+                )
             default:
                 console.log("default");
         }
@@ -181,21 +168,16 @@ export default function Entire() {
         <div className={classes.root}>
             {/* CssBaselineは各ブラウザの差異を平均化させる役割 */}
             <CssBaseline />
-            {/* clsxはclassNameを動的に示す際に利用する */}
-            {/* <TestCompornent className={clsx(classes.before, boolean && classes.after )}  /> */}
-            {/* openがTrueの時にclasses.appBarShiftになる。 */}
-            <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
-                <Toolbar className={classes.toolbar}>
+            <AppBar position="fixed" className={classes.appBar}>
+                <Toolbar>
                     <IconButton
                         edge="start"
                         color="inherit"
-                        // aria-labelの意味はまだわからず。。
                         aria-label="open drawer"
-
-                        onClick={handleDrawerOpen}
-                        className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
+                        onClick={handleDrawerToggle}
+                        className={classes.menuButton}
                     >
-                        {/* 隠しメニューの時のみ表示される */}
+                        {/* 画面が小さい時のみ表示される */}
                         <MenuIcon />
                     </IconButton>
                     {/* variantで文字サイズを定義 */}
@@ -205,23 +187,42 @@ export default function Entire() {
                 </Toolbar>
             </AppBar>
 
-            <Drawer
-                variant="permanent"
-                classes={{
-                    paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
-                }}
-                open={open}
-            >
-                <div className={classes.toolbarIcon}>
-                    <IconButton onClick={handleDrawerClose}>
-                        <ChevronLeftIcon />
-                    </IconButton>
-                </div>
-                <Divider />
-                <List><MainListItems updateStateFunc={handleItemFunctions} /></List>
-                <Divider />
-                <List>{secondaryListItems}</List>
-            </Drawer>
+            <nav className={classes.drawer} aria-label="mailbox folders">
+                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+                <Hidden smUp implementation="css">
+                    <Drawer
+                        container={container}
+                        variant="temporary"
+                        anchor={theme.direction === "rtl" ? "right" : "left"}
+                        open={mobileOpen}
+                        onClose={handleDrawerToggle}
+                        classes={{
+                            paper: classes.drawerPaper
+                        }}
+                        ModalProps={{
+                            keepMounted: true // Better open performance on mobile.
+                        }}
+                    >
+                        <div className={classes.toolbar} />
+                        <Divider />
+                        <List><MainListItems updateStateFunc={handleItemFunctions} /></List>
+                    </Drawer>
+                </Hidden>
+                <Hidden xsDown implementation="css">
+                    <Drawer
+                        classes={{
+                            paper: classes.drawerPaper
+                        }}
+                        variant="permanent"
+                        open
+                    >
+                        <div className={classes.toolbar} />
+                        <Divider />
+                        <List><MainListItems updateStateFunc={handleItemFunctions} /></List>
+                    </Drawer>
+                </Hidden>
+            </nav>
+
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
 
@@ -236,3 +237,6 @@ export default function Entire() {
         </div>
     );
 }
+Entire.propTypes = {
+    window: PropTypes.func,
+};
