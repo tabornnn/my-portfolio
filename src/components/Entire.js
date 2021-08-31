@@ -19,6 +19,7 @@ import LoadJobChange from './loadJobChange/LoadJobChange';
 import Skills from './skills/Skills';
 import Hidden from "@material-ui/core/Hidden";
 import PropTypes from 'prop-types';
+import Chatbot from './chatbot/Chatbot'
 
 
 function Copyright() {
@@ -26,7 +27,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+                Takashi Inoue
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -128,6 +129,12 @@ export default function Entire(props) {
                         <Skills />
                     </div>
                 )
+            case botObj.key:
+                return (
+                    <div>
+                        <Chatbot />
+                    </div>
+                )
             default:
                 console.log("default");
         }
@@ -148,6 +155,10 @@ export default function Entire(props) {
                 return (
                     skillsObj.text
                 )
+            case botObj.key:
+                return (
+                    botObj.text
+                )
             default:
                 console.log("default");
         }
@@ -157,9 +168,6 @@ export default function Entire(props) {
         <div className={classes.root}>
             {/* CssBaselineは各ブラウザの差異を平均化させる役割 */}
             <CssBaseline />
-            {/* clsxはclassNameを動的に示す際に利用する */}
-            {/* <TestCompornent className={clsx(classes.before, boolean && classes.after )}  /> */}
-            {/* openがTrueの時にclasses.appBarShiftになる。 */}
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                     <IconButton
@@ -195,9 +203,9 @@ export default function Entire(props) {
                             keepMounted: true // Better open performance on mobile.
                         }}
                     >
-                        <div className={classes.toolbar} >
-                            <List><MainListItems updateStateFunc={handleItemFunctions} /></List>
-                        </div>
+                        <div className={classes.toolbar} />
+                        <Divider />
+                        <List><MainListItems updateStateFunc={handleItemFunctions} /></List>
                     </Drawer>
                 </Hidden>
                 <Hidden xsDown implementation="css">
