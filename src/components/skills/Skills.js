@@ -32,8 +32,8 @@ const frontRows = [
 ];
 
 const backRows = [
-       createData("Java", levelDef(2), "当言語を利用してアプリケーションを構築でき、他者のコードRvを実施できる。"),
-       createData("SQL", levelDef(3), "適切なSQL文の作成からチューニングまで実施できる。"),
+       createData("Java", levelDef(3), "当言語を利用してアプリケーションを構築でき、他者のコードRvを実施できる。"),
+       createData("SQL", levelDef(2), "適切なSQL文の作成を実施できる。"),
        createData("Spring FW", levelDef(2), "FWの仕様に準拠したWebアプリケーションを構築できる。"),
        createData("Linux", levelDef(2), "シェルを通しての操作、シェルスクリプトを作成することができる。"),
        createData("Docker", levelDef(2), "コンテナの概念を理解し、環境を適切に扱うことができる。"),

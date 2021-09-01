@@ -9,9 +9,9 @@ export default function PaperItem(props) {
       return (
         <React.Fragment>
           <Title>当サイトの目的</Title>
-          <Typography component="p" >
+          <Typography  >
             私、井上昂のポートフォリオとなります。<br />
-            2022年4月を目処にして、<br />フロントエンドエンジニアとして転職を決断しました。<br />
+            2022年1月~3月を目処にして、<br />フロントエンドエンジニアとして転職を決断しました。<br />
             当サイトを通じて、私のスキルや転職の経緯を<br />
             知っていただければ幸いです。
           </Typography>
@@ -30,6 +30,12 @@ export default function PaperItem(props) {
             サーバーサイドエンジニアとして活躍。<br />
             日常の中でフロントエンドの技術に興味を持ち、<br />
             独学でSPAアプリケーション構築技術を習得。
+          </Typography>
+          <Typography color="textSecondary" paragraph>
+            mail：tabornn.work@gmail.com<br />
+            github：
+            <a href="https://github.com/tabornnn">https://github.com/tabornnn</a>
+
           </Typography>
         </React.Fragment>
       );
