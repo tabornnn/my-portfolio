@@ -34,7 +34,7 @@ export default function PaperItem(props) {
           <Typography color="textSecondary" paragraph>
             mail：tabornn.work@gmail.com<br />
             github：
-            <a href=" https://github.com/tabornnn">リンク</a>
+            <a href="https://github.com/tabornnn">https://github.com/tabornnn</a>
 
           </Typography>
         </React.Fragment>
