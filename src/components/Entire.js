@@ -22,18 +22,18 @@ import PropTypes from 'prop-types';
 import Chatbot from './chatbot/Chatbot'
 
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Takashi Inoue
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
+// function Copyright() {
+//     return (
+//         <Typography variant="body2" color="textSecondary" align="center">
+//             {'Copyright © '}
+//             <Link color="inherit" href="https://material-ui.com/">
+//                 Takashi Inoue
+//             </Link>{' '}
+//             {new Date().getFullYear()}
+//             {'.'}
+//         </Typography>
+//     );
+// }
 
 const drawerWidth = 240;
 
@@ -117,7 +117,7 @@ export default function Entire(props) {
         switch (itemListState) {
             case homeObj.key:
                 return (
-                    <Home />
+                    <Home updateStateFunc={handleItemFunctions} />
                 )
             case loadObj.key:
                 return (
@@ -229,9 +229,9 @@ export default function Entire(props) {
                 <Container maxWidth="lg" className={classes.container}>
                     {/* litemListStateごとのコンテンツを表示させる */}
                     {contents(listItemState)}
-                    <Box pt={4}>
+                    {/* <Box pt={4}>
                         <Copyright />
-                    </Box>
+                    </Box> */}
                 </Container>
             </main>
         </div>

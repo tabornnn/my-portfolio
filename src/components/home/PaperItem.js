@@ -22,12 +22,12 @@ export default function PaperItem(props) {
       return (
         <React.Fragment>
           <Title>プロフィール</Title>
-          <Typography component="p" >
+          <Typography variant="body2">
             井上昂(Takashi Inoue)<br />
             1996年生まれ。24才。社会人3年目。<br />
             大学卒業後、保険系SIerに就職。<br />
             アプリケーション基盤チームで、<br />
-            サーバーサイドエンジニアとして活躍。<br />
+            バックエンド中心に活躍。<br />
             日常の中でフロントエンドの技術に興味を持ち、<br />
             独学でSPAアプリケーション構築技術を習得。
           </Typography>

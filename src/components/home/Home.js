@@ -32,13 +32,12 @@ const useStyles = makeStyles((theme) => ({
        },
        fixedPaper: {
               marginTop: 20,
-
        },
        paperHalf: {
               // display: 'flex',
 
               width: '95%',
-              height: 150,
+              height: 120,
               // marginTop: 20,
               marginLeft: 10,
               // textAlign: 'center',
@@ -63,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Home() {
+export default function Home(props) {
        const classes = useStyles();
 
        const myPicture = clsx(classes.paper, classes.myPicture);
@@ -94,7 +93,7 @@ export default function Home() {
                                    <br />
 
                                    {/* <Grid container spacing={0}> */}
-                                   <Grid container spacing={0}>
+                                   <Grid container spacing={2}>
 
 
                                           <Grid item xs={6} md={6} lg={6}>
@@ -107,7 +106,7 @@ export default function Home() {
                                                         </CardContent>
 
                                                         <CardActions>
-                                                               <Button size="small">>>詳しくみる</Button>
+                                                               <Button size="small" onClick={props.updateStateFunc[1]}>&gt;&gt;詳しくみる</Button>
                                                         </CardActions>
                                                  </Card>
                                           </Grid>
@@ -124,7 +123,9 @@ export default function Home() {
                                                         </CardContent>
 
                                                         <CardActions>
-                                                               <Button size="small">>>詳しくみる</Button>
+                                                               <Button size="small" onClick={props.updateStateFunc[2]}>
+                                                                      &gt;&gt;詳しくみる
+                                                               </Button>
                                                         </CardActions>
                                                  </Card>
 
