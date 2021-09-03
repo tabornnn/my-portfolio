@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
        paper: {
               padding: theme.spacing(2),
               display: 'flex',
-              overflow: 'auto',
+              // overflow: 'auto',
               flexDirection: 'column',
               margin: '0 auto',
               justifyContent: 'center',
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
        flexContainer: {
               padding: theme.spacing(2),
               display: 'flex',
-              overflow: 'auto',
+              // overflow: 'auto',
               flexDirection: 'column',
               margin: '0 auto',
               justifyContent: 'center',
