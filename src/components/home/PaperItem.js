@@ -21,9 +21,9 @@ export default function PaperItem(props) {
     case "baseProfile":
       return (
         <React.Fragment>
-          <Title>基本プロフィール</Title>
+          <Title>プロフィール</Title>
           <Typography component="p" >
-
+            井上昂(Takashi Inoue)<br />
             1996年生まれ。24才。社会人3年目。<br />
             大学卒業後、保険系SIerに就職。<br />
             アプリケーション基盤チームで、<br />
@@ -43,7 +43,7 @@ export default function PaperItem(props) {
     default:
       return (
         <React.Fragment>
-          あいうえお
+          Error!
         </React.Fragment>
       );
   }

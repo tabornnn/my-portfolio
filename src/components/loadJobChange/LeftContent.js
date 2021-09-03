@@ -30,7 +30,6 @@ export const LeftContent = React.forwardRef((props, ref) => {
               <>
                      {/* <div style={modalStyle} className={classes.paper}> */}
                      <div className={classes.paper}>
-
                             <Typography gutterBottom variant="h7" component="h2">
                                    現職の活動内容について
                             </Typography>
@@ -39,21 +38,19 @@ export const LeftContent = React.forwardRef((props, ref) => {
                             </Typography>
                             <Typography variant="caption" color="textPrimary" component="p">
                                    共済系基幹システムをメインフレームからオープン化する案件を対応。<br />
-                                   約3年に及ぶプロジェクトの立ち上げから参画した。
+                                   約3年に及ぶプロジェクトの立ち上げから参画。
                                    <br />
                             </Typography>
                             <br />
-
                             <Typography variant="subtitle1" color="primary" component="p">
                                    所属チームについて
                             </Typography>
                             <Typography variant="caption" color="textPrimary" component="p">
-                                   アプリケーション基盤チームに所属。FWの構築や共通部品の作成などを遂行。<br />
+                                   アプリケーション基盤チームに所属。FWの構築や共通部品の作成などに従事。<br />
                                    インフラチームとアプリチーム双方と連携を取りながら業務を進める。
                                    <br />
                             </Typography>
                             <br />
-
                             <Typography variant="subtitle1" color="primary" component="p">
                                    経験業務について
                             </Typography>
@@ -72,28 +69,24 @@ export const LeftContent = React.forwardRef((props, ref) => {
                                    Dockerを用いたテスト環境を構築<br /><br />
 
                                    <b>4 . 認証基盤の構築</b><br />
-                                   keycloakを利用し、周辺システムと認証基盤を統合<br /><br />
+                                   Keycloakを利用し、周辺システムと認証基盤を統合<br /><br />
 
                                    <b>5 . PMO</b><br />
                                    チーム内のPMOとして各メンバーの業務遂行をサポート<br />
                                    会議のファシリテータやWBSの更新、各メンバーへの作業指示を実施<br />
                                    <br />
                             </Typography>
-
                             <Typography variant="subtitle1" color="primary" component="p">
                                    身につけたスキル
                             </Typography>
                             <Typography variant="caption" color="textPrimary" component="p">
 
                                    <b>1 . ITスキル</b><br />
-                                   Webシステム構築に必要なインフラ・ミドルウェアの構成要素を幅広く理解し、適切に利用できること。<br />
+                                   Webシステム構築に必要なインフラ・ミドルウェアの構成要素を幅広く理解し、適切に利用できること。<br /><br />
 
                                    <b>2 . ビジネススキル</b><br />
                                    チームで働くために必要なコミュニケーション能力。(トレース、ヘルプ、進捗報告、会議運営)<br />
-
                             </Typography>
-
-
                      </div>
               </>
        )
