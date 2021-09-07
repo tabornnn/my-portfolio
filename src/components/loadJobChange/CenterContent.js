@@ -35,19 +35,26 @@ export const CenterContent = React.forwardRef((props, ref) => {
                                    フロントエンジニアとして転職を決意
                             </Typography>
                             <Typography variant="subtitle1" color="primary" component="p">
-                                   AirbnbのUIに衝撃を受ける
+                                   Netfilxを利用した経験
                             </Typography>
                             <Typography variant="caption" color="textPrimary" component="p">
                                    {/* <div className={classes.p}> */}
 
-                                   私が初めてAirbnbを利用した際、UIに関連する以下のポイントに感動を受けました。<br />
-                                   ・ユーザーの<b>目的を達成するまでの楽さ</b><br />
-                                   ・高い<b>操作性</b><br />
-                                   ・リッチな<b>デザイン</b><br />
-                                   機能的には他の旅行サイトと比較しても大きな差異はないため、使いやすいAirbnbを利用するようになりました。<br />
-                                   この経験から私はサービスにおける<b>UIの重要性を認識</b>するともに、<br />
-                                   同じような感動を自分も与えたいと感じました。
-                                   <br /><br />
+                                   私は動画配信サービスのNetflixとAmazon Primeの両方に登録しています。<br />
+                                   しかし長年利用する間に、「Netflixをまず見て、なかったらAmazon Primeをみる」という流れになり、<br />
+                                   私の中でNetflixが優勢になっていました。<br />
+
+                                   コンテンツ内容としてはあまり相違がない両サービスですが、単純にNetflixの方がアプリを触っていて快適だったのです。<br />
+
+                                   これについて深堀してみると、<br />
+                                   ・各アイテムの色味や配置、大きさなどのデザイン<br />
+                                   ・表示している画面に応じて変化するアイテムの状態
+                                   (動画の自動再生機能など)<br />
+                                   といったUI部分に惹かれていたのでした。<br />
+
+                                   私はこの経験を通して、利用者が同様の体験をするようなサービスを作りたいと思うとともに、<br />
+                                   システムにおけるフロントエンドの技術に興味を抱きました。<br />
+                                   <br />
                             </Typography>
 
                             <Typography variant="subtitle1" color="primary" component="p">
