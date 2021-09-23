@@ -33,15 +33,16 @@ export const RightContent = React.forwardRef((props, ref) => {
                      <div className={classes.paper}>
 
                             <Typography gutterBottom variant="h7" component="h2">
-                                   フロント領域の学習
+                                   モダンなフロントエンド技術の学習
                             </Typography>
 
                             <Typography variant="caption" color="textPrimary" component="p">
-                                   フロントエンドエンジニアとしての転職を決意した私ですが、<br />
-                                   業務で画面デザイン経験は乏しく、一から独学で勉強しました。<br />
-                                   目標を「<b>リッチなデザインのSPAを独力で構築できること</b>」に設定し、<br />
-                                   そのための技術要素としてまずは<b>React</b>と<b>Material Ui</b>を選定しました。<br />
-                                   仕事の合間をぬって勉強を重ね、結果として目標は達成できたと考えております。<br />
+                                   私自身の嗜好として「モダンなフロントエンド技術」に興味がありますが、<br />
+                                   業務上フロントエンドに関しては簡単なHTML・CSS・JavaScriptのみ。<br />
+                                   そのため個人で学習を進めており、<br />
+                                   目標を「<b>リッチなデザインのSPAをReactで構築できること</b>」に設定しました。<br />
+                                   仕事の合間をぬって学習を進めていき、<br />
+                                   結果として目標は達成できたと考えております。<br />
                                    (当サイトもReact + Material UIの構成で構築しております。)<br /><br />
 
 
