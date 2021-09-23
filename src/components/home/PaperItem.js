@@ -27,9 +27,9 @@ export default function PaperItem(props) {
             1996年生まれ。24才。社会人3年目。<br />
             大学卒業後、保険系SIerに就職。<br />
             アプリケーション基盤チームで、<br />
-            バックエンド中心に活躍。<br />
-            日常の中でフロントエンドの技術に興味を持ち、<br />
-            独学でSPAアプリケーション構築技術を習得。
+            基幹システムの構築に従事し、バックエンド中心に活躍。<br />
+            目指しているエンジニア像を実現できる環境を求めて転職を決意。
+
           </Typography>
           <Typography color="textSecondary" paragraph>
             mail：tabornn.work@gmail.com<br />

@@ -97,12 +97,11 @@ export default function LoadJobChange() {
                             <div className={classes.heroContent}>
                                    <Container maxWidth="sm">
                                           <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
-                                                 なぜ、フロント？
+                                                 これまでの歩み
                                           </Typography>
                                           <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                                 現職はサーバーサイドが主戦場です。<br />
-                                                 そんな私がフロントエンドエンジニアとして
-                                                 転職を決意した経緯を説明します。
+                                                 私のこれまでの業務経験と、<br />
+                                                 転職に至るまでの経緯を説明します
                                           </Typography>
                                    </Container>
                             </div>
@@ -122,7 +121,7 @@ export default function LoadJobChange() {
                                                                       現職の活動内容
                                                                </Typography>
                                                                <Typography>
-                                                                      現職では、保険系SIerのアプリケーション基盤チームで、共済向けに基幹システムの導入を実施しております。
+                                                                      現職では、保険系SIerのアプリケーション基盤チームで、基幹システムの導入を実施しております。
                                                                </Typography>
                                                         </CardContent>
                                                         <CardActions>
@@ -158,10 +157,11 @@ export default function LoadJobChange() {
                                                         />
                                                         <CardContent className={classes.cardContent}>
                                                                <Typography gutterBottom variant="h6" component="h2">
-                                                                      フロントエンジニアとして転職を決意
+                                                                      転職を決意
                                                                </Typography>
                                                                <Typography>
-                                                                      日常で利用するアプリケーションからUIの重要性を認識し、スキルを磨くために転職を決意しました。
+                                                                      約2年半のITエンジニアとしての経験から、「理想のエンジニア像」が明確になりました。
+                                                                      より実現できる環境を求めて転職を決意。
                                                                </Typography>
                                                         </CardContent>
                                                         <CardActions>
@@ -200,7 +200,7 @@ export default function LoadJobChange() {
                                                                       フロント領域の学習
                                                                </Typography>
                                                                <Typography>
-                                                                      業務におけるフロント技術経験が乏しい私は、独学を始めます。
+                                                                      フロントエンドに関しては業務での関与が少ないため、独学で学習を進めています。
                                                                </Typography>
                                                         </CardContent>
                                                         <CardActions>
