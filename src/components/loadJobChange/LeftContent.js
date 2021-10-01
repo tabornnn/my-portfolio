@@ -37,9 +37,8 @@ export const LeftContent = React.forwardRef((props, ref) => {
                                    参加案件について
                             </Typography>
                             <Typography variant="caption" color="textPrimary" component="p">
-                                   共済系基幹システムをメインフレームからオープン化する案件を対応。<br />
-                                   約3年に及ぶプロジェクトの立ち上げから参画。
-                                   <br />
+                                   共済組合の学生向け商品に関して、契約管理システムをオープン化する対応。<br />
+                                   既存のホストや周辺システムとの整合性を担保しつつ、新規に契約管理システムを構築を実施。<br />
                             </Typography>
                             <br />
                             <Typography variant="subtitle1" color="primary" component="p">
@@ -77,15 +76,17 @@ export const LeftContent = React.forwardRef((props, ref) => {
                                    <br />
                             </Typography>
                             <Typography variant="subtitle1" color="primary" component="p">
-                                   身につけたスキル
+                                   実績
                             </Typography>
                             <Typography variant="caption" color="textPrimary" component="p">
 
-                                   <b>1 . ITスキル</b><br />
-                                   Webシステム構築に必要なインフラ・ミドルウェアの構成要素を幅広く理解し、適切に利用できること。<br /><br />
+                                   <b>1 . システムの根幹となる排他制御機構の設計開発を遂行</b><br />
+                                   周辺システムとの整合性も考慮した排他制御機構を設計<br /><br />
 
-                                   <b>2 . ビジネススキル</b><br />
-                                   チームで働くために必要なコミュニケーション能力。(トレース、ヘルプ、進捗報告、会議運営)<br />
+                                   <b>2 . オンライン、バッチの性能検証を担当し、作業計画、実施、結果の考察、チューニングを実施し顧客への報告を実施。</b><br />
+                                   <br />
+
+                                   <b>3. チーム内PMOとして、成果物管理や会議のファシリテータを担当し、プロジェクトの円滑化を推進</b><br />
                             </Typography>
                      </div>
               </>
