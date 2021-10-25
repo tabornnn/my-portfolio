@@ -52,12 +52,12 @@ export function MainListItems(props) {
         </ListItemIcon>
         <ListItemText primary={skillsObj.text} />
       </ListItem>
-      <ListItem button onClick={props.updateStateFunc[3]}>
+      {/* <ListItem button onClick={props.updateStateFunc[3]}>
         <ListItemIcon>
           <ChatIcon />
         </ListItemIcon>
         <ListItemText primary={botObj.text} />
-      </ListItem>
+      </ListItem> */}
     </div>
   )
 }
